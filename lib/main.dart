@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:sliverspractice/insidechat.dart';
 
 void main() {
   runApp(MyApp(items: List<String>.generate(1000, (i) => "item $i")));
@@ -16,17 +17,17 @@ class MyApp extends StatelessWidget {
       home: DefaultTabController(
         length: 4,
         child: Scaffold(
-          backgroundColor: Colors.amberAccent,
+          backgroundColor: Colors.grey[850],
           body: Container(
             child: CustomScrollView(
               slivers: <Widget>[
                 SliverAppBar(
-                  backgroundColor: Colors.grey,
+                  backgroundColor: Colors.grey[700],
                   actions: <Widget>[
                     // action button
                     IconButton(icon: Icon(Icons.search), onPressed: () {}),
                     // action button
-                    IconButton(icon: Icon(Icons.more), onPressed: () {}),
+                    IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
                   ],
                   title: Text('Whatsapp'),
                   floating: true,
@@ -49,65 +50,758 @@ class MyApp extends StatelessWidget {
                             Icon(Icons.camera),
                             (ListView(children: <Widget>[
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Insidechat()),
+                                  );
+                                },
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                trailing: Text('yesterday',
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('guitar'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('violin'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('piano'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('speaker'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('saxophone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
                               ),
                               ListTile(
-                                leading: Icon(Icons.contact_mail),
-                                title: Text('phone'),
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                            ])
+                            
+                            ),
+                            (ListView(children: <Widget>[
+                            ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'yesterday, 15.30',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                               Text('    Viewed updates',
+                               style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),),
+                               ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'yesterday, 15.30',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),   
                             ])),
-                            Icon(Icons.send),
-                            Icon(Icons.search),
-                            // constrain height
+                            (ListView(children: <Widget>[
+                              ListTile(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Insidechat()),
+                                  );
+                                },
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                trailing: Icon(Icons.phone,
+                                color: Colors.green[600],
+                                ),
+                                
+                                ),
+                              
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                              ListTile(
+                                leading: CircleAvatar(
+                                  radius: 28,
+                                ),
+                                title: Text(
+                                  'phone',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  'vee',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.grey[600],
+                                endIndent: 4,
+                              ),
+                            ])
+                            
+                            ),
+                             // constrain height
                           ],
                         ),
                       ),
